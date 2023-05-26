@@ -33,7 +33,7 @@ function peopleAge(age) {
 
 }
 
-// console.log(peopleAge(prompt('Age:')));
+console.log(peopleAge(prompt('Age:')));
 
 
 
@@ -74,7 +74,7 @@ function areaCal(shape) {
 
 }
 
-// console.log(areaCal(prompt('Type Rectangle or Square or Triangle')));
+console.log(areaCal(prompt('Type Rectangle or Square or Triangle')));
 
 
 
@@ -88,7 +88,6 @@ function areaCal(shape) {
 function gpaCal(mark) {
     
     // FOR GET GPA
-
     let gpa;
 
     if (mark >= 0 && mark <= 33) {
@@ -118,13 +117,9 @@ function gpaCal(mark) {
     return gpa;
 }
 
-// console.log(gpaCal(parseInt(prompt('Mark:'))));
-
-
 function gradeCal(mark) {
 
     // FOR GET GRADE
-
     let grade;
 
     if (mark >= 0 && mark <= 33) {
