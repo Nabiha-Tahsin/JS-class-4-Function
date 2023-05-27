@@ -3,10 +3,8 @@
 * Create a function that will return children, teenagers, young people, old people from the age 
 */
 
-
 function peopleAge(age) {
 
-    
     if (age >= 0 && age <= 12) {
         console.log(`You are ${age} years old & your are a Children`);
     }
@@ -30,12 +28,12 @@ function peopleAge(age) {
     else{
         console.log('Invalid Age');
     }
-
 }
 
+console.log('THIS IS ASSIGNMENT 1');
 console.log(peopleAge(prompt('Age:')));
 
-
+//--------------------------------------------- 1 END ---------------------------------------------//
 
 
 /*
@@ -74,8 +72,10 @@ function areaCal(shape) {
 
 }
 
+console.log('THIS IS ASSIGNMENT 2');
 console.log(areaCal(prompt('Type Rectangle or Square or Triangle')));
 
+//--------------------------------------------- 2 END ---------------------------------------------//
 
 
 
@@ -85,9 +85,10 @@ console.log(areaCal(prompt('Type Rectangle or Square or Triangle')));
 */
 
 
+// FOR GET GPA
+
 function gpaCal(mark) {
     
-    // FOR GET GPA
     let gpa;
 
     if (mark >= 0 && mark <= 33) {
@@ -117,9 +118,11 @@ function gpaCal(mark) {
     return gpa;
 }
 
+
+// FOR GET GRADE
+
 function gradeCal(mark) {
 
-    // FOR GET GRADE
     let grade;
 
     if (mark >= 0 && mark <= 33) {
@@ -150,6 +153,7 @@ function gradeCal(mark) {
 }
 
 
+
 function allSubject(bn, en, math, s, ss, rel){
 
     // FOR INDIVIDUAL SUBJECT GPA
@@ -169,7 +173,7 @@ function allSubject(bn, en, math, s, ss, rel){
     let rel_grade = gradeCal(rel);
 
     let cgpa;
-
+    // If Fail in any subject
     if(bn >= 33 && en >= 33 && math >= 33 && s >= 33 && ss >= 33 && rel >= 33){
         cgpa = (bn + en + math + s + ss + rel) / 100
     }
@@ -192,17 +196,124 @@ function allSubject(bn, en, math, s, ss, rel){
     `
 
 }
+
+console.log('THIS IS ASSIGNMENT 3');
 // Mark without prompt
 console.log(allSubject(80, 70, 60, 58, 68, 89));
+
 // Mark with prompt
 // console.log(allSubject(parseInt(prompt('Bangla:')), parseInt(prompt('English:')), parseInt(prompt('Math:')), parseInt(prompt('Science:')), parseInt(prompt('S Science:')), parseInt(prompt('Religion:')) ));
 
 
+//--------------------------------------------- 3 END ---------------------------------------------//
 
 
 
+/*
+* ASSIGNMENT 4
+* Create an age calculator function 
+*/
+
+function ageCal(birthYear, birthMonth){
+
+    let age = 2023 - birthYear;
+    // 6 means current month june(6)
+    let month = 6 - birthMonth;
+
+    // Ei year e birth months jodi JUNE er pore hoy mane current months er pore hoy
+    if (month < 0) {
+
+        // age-- mane age theke 1 year kombe karon age month ekhono ase ni
+        age--;
+        // month er sathe 12 + hobe. ex: if current month is 5 and birth Month is 9 then month = 6 - 9 = -3 . Then -3 + 12 = 9. output will be ___ year and 9 months.
+        month += 12;
+    }
+
+    return ` Your Age is ${age} years and ${month} months ` ;
+
+}
+
+console.log('THIS IS ASSIGNMENT 4');
+console.log(ageCal(2004, 9));
+// Age from Prompt
+// console.log(ageCal(prompt('Your Birth Year'), prompt('Your Birth months in number(1 - 12):')));
 
 
+//--------------------------------------------- 4 END ---------------------------------------------//
+
+
+/*
+* ASSIGNMENT 5
+* Create a BMI function for health 
+*/
+
+function bmiCal(weight, height) {
+
+    const bmi = weight / (height * height)
+
+    if (bmi < 18.5) {
+        console.log(`Your BMI is ${bmi} and you are Under Weight`);
+    }
+    else if (bmi >= 18.5 && bmi < 25) {
+        console.log(`Your BMI is ${bmi} and your Weight is Normal`);
+    }
+    else if (bmi >= 25 && bmi < 30) {
+        console.log(`Your BMI is ${bmi} and you Over Weight`);
+    }
+    else if (bmi >= 30 && bmi < 35) {
+        console.log(`Your BMI is ${bmi} and your Weight is Obesity(Class |)`);
+    }
+    else if (bmi >= 30 && bmi < 40) {
+        console.log(`Your BMI is ${bmi} and your Weight is Obesity(Class ||)`);
+    }
+    else if (bmi > 40 ) {
+        console.log(`Your BMI is ${bmi} and your Weight is Extreme Obesity`);
+    }
+
+}
+
+console.log('THIS IS ASSIGNMENT 5');
+// Height in meters
+bmiCal(45, 1.65);
+
+//--------------------------------------------- 5 END ---------------------------------------------//
+
+
+
+/*
+* ASSIGNMENT 6
+* Create a currency converter function from taka to USD, CAD, POUND, EURO etc 
+*/
+
+function currencyCal(type_currency, ammount) {
+    
+    let rate;
+    switch (type_currency) {
+        case 'USD':
+            rate = 107.20;
+            break;
+        case 'CAD':
+            rate = 78.76;
+            break;
+        case 'POUND':
+            rate = 132.35;
+            break;
+        case 'EURO':
+            rate = 115.04;
+            break;
+        default:
+            rate = 'Invelid Currency'
+            break;
+    }
+
+    let currency = ammount * rate;
+    return currency;
+}
+
+console.log('THIS IS ASSIGNMENT 6');
+console.log(currencyCal('EURO', 100) + ' TK');
+
+//--------------------------------------------- 6 END ---------------------------------------------//
 
 
 
