@@ -225,7 +225,7 @@ function ageCal(birthYear, birthMonth){
 
         // age-- mane age theke 1 year kombe karon age month ekhono ase ni
         age--;
-        // month er sathe 12 + hobe. ex: if current month is 5 and birth Month is 9 then month = 6 - 9 = -3 . Then -3 + 12 = 9. output will be ___ year and 9 months.
+        // month er sathe 12 + hobe. ex: if current month is 6 and birth Month is 9 then month = 6 - 9 = -3 . Then -3 + 12 = 9. output will be ___ year and 9 months.
         month += 12;
     }
 
