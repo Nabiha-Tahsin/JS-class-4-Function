@@ -4,7 +4,7 @@
 */
 
 function peopleAge(age) {
-
+    
     if (age >= 0 && age <= 12) {
         console.log(`You are ${age} years old & your are a Children`);
     }
@@ -43,21 +43,25 @@ console.log(peopleAge(prompt('Age:')));
 
 
 function areaCal(shape) {
-
+    
+    // FIND VALUE FOR SPECIFIC SHAPE FROM PROMPT
     switch (shape) {
+        //FOR RECTANGLE SHAPE
         case 'Rectangle':
             let length = parseInt(prompt('Length:'));
             let width = parseInt(prompt('Width:'));
 
             console.log('Area = ' + length * width);
             break;
-
+            
+        //FOR SQUARE SHAPE
         case 'Square':
             let side = parseInt(prompt('Side Value:'));
 
             console.log('Area = ' + side * side);
             break;
 
+        //FOR TRIANGLE SHAPE
         case 'Triangle':
             let height = parseInt(prompt('Height:'));
             let base = parseInt(prompt('Base:'));
@@ -65,6 +69,7 @@ function areaCal(shape) {
             console.log('Area = ' + .5 * base * height);
             break;
 
+        //FOR DEFAULT
         default:
             console.log('Invalid Shape');
     
@@ -248,7 +253,7 @@ console.log(ageCal(2004, 9));
 */
 
 function bmiCal(weight, height) {
-
+    // BMI FORMULA
     const bmi = weight / (height * height)
 
     if (bmi < 18.5) {
